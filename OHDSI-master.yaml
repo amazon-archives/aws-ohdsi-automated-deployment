@@ -347,6 +347,7 @@ Resources:
             export AWS_DEFAULT_REGION=$(echo $EB_ENDPOINT | cut -d . -f2)
             sudo yum install -y git
             git clone https://github.com/awslabs/aws-ohdsi-automated-deployment
+            cd aws-ohdsi-automated-deployment
             sudo yum install -y awslogs
             sed -i 's!'EB_ENDPOINT'!'$EB_ENDPOINT'!' awslogs.conf
             sudo cp awslogs.conf /etc/awslogs/awslogs.conf
