@@ -9,9 +9,9 @@
 
 install.packages("devtools",repos = "http://cran.us.r-project.org")
 library(devtools)
-install_github("awslabs/aws-ohdsi-automated-deployment", subdir = "SqlRender")
-install_github("awslabs/aws-ohdsi-automated-deployment", subdir = "DatabaseConnector")
-install_github("awslabs/aws-ohdsi-automated-deployment", subdir = "Achilles")
+install("./SqlRender")
+install("./DatabaseConnector")
+install("./Achilles")
 library(Achilles)
 connectionDetails <- createConnectionDetails(dbms="redshift", server="REDSHIFT_ENDPOINT/mycdm", user="master",
                             password='DATABASE_PASSWORD', schema="public", port="5439")
